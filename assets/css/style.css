@@ -40,7 +40,7 @@
 .navbar-nav li a   {
     color: white;
 }
-.banner {
+#banner {
     width: 100%;    
 }
 
@@ -79,14 +79,31 @@
    
 }
 
-.offer {
+.offer  {
     box-sizing: border-box;
     width: 260px;
     float: left;
     margin-right: 20px;
     text-align: center;
-    background: whitesmoke;
+    background:rgb(255, 254, 254);
+    
     border-radius: 5px;     
+}
+
+.pizza  {
+    box-sizing: border-box;
+    width: 230px;
+    height: 400px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background: rgb(255, 254, 254);;
+    border-radius: 5px;     
+}
+
+#container-for-pizza:last-child {
+    margin-right: 0px;
 }
 
 .offer img {
@@ -135,14 +152,29 @@ footer {
 .menu-bar {
     padding-top: 30px;  
     margin-bottom: 30px; 
-    font-size: 0.8em;
+    
 }
 
 .menu-bar img {
     opacity: 0.8;
 }
 
-.menu-bar li {
+.menu-bar a {
     cursor: pointer;
     opacity: 0.8;
+    font-size: 0.8em;
+    color: grey;
+    font-weight: bold;
+    text-decoration: none;
 }
+
+#container-for-pizza {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 1340px;
+    padding-top: 150px;
+    margin-left: 60px;
+}   
+
+
+
