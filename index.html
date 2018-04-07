@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="assets/css/style.css"/>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="node_modules/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
-    <script src="node_modules/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script> 
     <script src="assets/js/first-page_Service.js"></script>
-    <script src="assets/js/pizza_Service.js"></script>
     <script src = "assets/js/first-page_Controller.js"></script>
+    <script src="assets/js/pizza_Service.js"></script>
     <script src="assets/js/pizzaController.js"></script>
-
-    
+    <script src="assets/js/pastaService.js"></script>
+    <script src = "assets/js/pastaController.js"></script>
+    <script src="assets/js/salad_and_others_service.js"></script>
+    <script src = "assets/js/salads_and_Others_Controllers.js"></script>
      
     <title>Pizza</title>
 
@@ -47,10 +49,10 @@
                            
             </li>
             <li class="language-select cursor-pointer language-select-desktop text-center"> 
-                    <a href="javascrip:;" class = "font-bold lang_select" data-lang="bg">BG</a>
+                <a href="javascrip:;" class = "font-bold lang_select" data-lang="bg">BG</a>
             </li>
-            <li> <a href="/" class=" font-bold">PIZZA TRAKER</a></li>
-            <li><a href="/" class="button font-bold">ПОРЪЧАЙ СЕГА</a></li>
+            <li> <a href="/" class="font-bold">PIZZA TRAKER</a></li>
+            <li><a href="/" class="font-bold">ПОРЪЧАЙ СЕГА</a></li>
             <li class="cart-icon-wrapper">
                 <div class="basket cursor-pointer"></div>
             </li>
@@ -90,8 +92,8 @@
     
 <script id="deal-template" type="text/x-handlebars-template">
     {{#each allDeals}}
-        <div class="offer">
-            <img class="display block" src="{{url}}" alt="promo" width="260px" height="186"/>
+        <div class="offer zoom">
+            <img class="display block" src="{{url}}" alt="promo" width="230px" height="186"/>
             <img class='promoRibbon' src="assets/images/offer_ribbon_bg.png" width="150px" height="80px;"/>
             <div class="center block padding=20px"><p>{{description}}</p></div>
             <div class="button green-bnt center-block">ВЗЕМИ ТАЗИ ОФЕРТA </div>
@@ -106,48 +108,111 @@
 </script>
 
 <div id ="second-page-container">
-    <ul>
-        <li><a href="#pizza">ПИЦИ</a></li>
-        <li><a href="#pasta">ПАСТА</a></li>
-        <li><a href="#salads">САЛАТИ</a></li>
-        <li><a href="#sandwich">САНДВИЧИ</a></li>
-        <li><a href="#desserts">ДЕСЕРТИ</a></li>
+    <ul  class="navbar-menu list-inline text-center">
+        <li class="cursor-pointer text-center"><a href="#pizza">ПИЦИ</a></li>
+        <li class="cursor-pointer text-center"><a href="#pasta">ПАСТА</a></li>
+        <li class="cursor-pointer text-center"><a href="#salads">САЛАТИ</a></li>
+        <li class="cursor-pointer text-center"><a href="#sandwich">САНДВИЧИ</a></li>
+        <li class="cursor-pointer text-center"><a href="#dips">СОСОВЕ </a></li>
+        <li class="cursor-pointer text-center"><a href="#desserts">ДЕСЕРТИ </a></li>
+        <hr> </hr>
     </ul>
+   
 
-    <div id="pizza"></div>
+<div id="menu-contend"> </div>
 
 </div>
 
 <script id="pizza-template" type="text/x-handlebars-template">
-    
-    <div id="container-for-pizza"> 
-
+    <div class="container-for-menu"> 
         {{#each allPizza}}
-        
-            <div class="pizza">
+            <div class="pizza zoom">
                 <img class="display block" src="{{url}}" alt="pizza" width="230px" height="186"/>
-                <div class="center block padding=20px"><p>{{description}}</p></div>
+                <div class="center block padding=20px"><h4>{{name}}</h4></div>
+                <div class="center block padding=20px"><p class="descr">{{description}}</p></div>
+                <div class="button green-bnt center-block">ПОРЪЧАЙ </div>
+                <div class="center-block blue-txt font-fold">
+                </div>
+            </div> 
+        {{/each}}
+    </div>      
+</script>
+
+<script id="pasta-template" type="text/x-handlebars-template">
+    <div class="container-for-menu"> 
+        {{#each allPasta}}
+            <div class="pasta zoom">
+                <img class="display block" src="{{url}}" alt="pizza" width="230px" height="186"/>
+                <div class="center block padding=20px"><h4>{{name}}</h4></div>
+                <div class="center block padding=20px"><p class="descr">{{description}}</p></div>
                 <div class="button green-bnt center-block">ПОРЪЧАЙ </div>
                 <div class="center-block blue-txt font-fold">
                 </div>
             </div>
-    
         {{/each}}
-
-
     </div>      
 </script>
-
-
+<script id="salad-template" type="text/x-handlebars-template">
+    <div class="container-for-menu"> 
+        {{#each allSalad}}
+            <div class="salads zoom">
+                <img class="display block" src="{{url}}" alt="pasta" width="230px" height="186"/>
+                <div class="center block padding=20px"><h4>{{name}}</h4></div>
+                <div class="center block padding=20px"><p class="descr">{{description}}</p></div>
+                <div class="button green-bnt center-block">ПОРЪЧАЙ </div>
+                <div class="center-block blue-txt font-fold">
+                </div>
+            </div>
+        {{/each}}
+    </div>      
+</script>
+<script id="sandwich-template" type="text/x-handlebars-template">
+    <div class="container-for-menu"> 
+        {{#each allSandwich}}
+            <div class="sandwich zoom">
+                <img class="display block" src="{{url}}" alt="sandwich" width="230px" height="186"/>
+                <div class="center block padding=20px"><h4>{{name}}</h4></div>
+                <div class="center block padding=20px"><p class="descr">{{description}}</p></div>
+                <div class="button green-bnt center-block">ПОРЪЧАЙ </div>
+                <div class="center-block blue-txt font-fold">
+                </div>
+            </div>
+        {{/each}}
+    </div>      
+</script>
+<script id="dips-template" type="text/x-handlebars-template">
+    <div class="container-for-menu"> 
+        {{#each allDips}}
+            <div class="dips zoom">
+                <div class="center block padding=20px"><h4>{{name}}</h4></div>
+                <img class="display block" src="{{url}}" alt="pizza" width="230px" height="186"/>
+                <div class="button green-bnt center-block">ПОРЪЧАЙ </div>
+                <div class="center-block blue-txt font-fold">
+                </div>
+            </div>
+        {{/each}}
+    </div>      
+</script>
+<script id="dessert-template" type="text/x-handlebars-template">
+    <div class="container-for-menu"> 
+        {{#each allDips}}
+            <div class="dessert zoom">
+                <div class="center block padding=20px"><h4>{{name}}</p></div>
+                <img class="display block" src="{{url}}" alt="dessert" width="230px" height="186"/>
+                <div class="button green-bnt center-block">ПОРЪЧАЙ </div>
+                <div class="center-block blue-txt font-fold">
+                </div>
+            </div>
+        {{/each}}
+    </div>      
+</script>
 <footer>
 <ul class='menu-bar list-inline text-center'>
-    
     <li class="cursor-pointer text-center"><a href="#menu">МЕНЮ</a></li>
     <li class="cursor-pointer text-center"><a href="#restoranti">РЕСТОРАНТИ</a></li>
     <li class="cursor-pointer text-center"><a href="#contactus">СВЪРЖЕТЕ СЕ С НАС</a></li>
     <li class="cursor-pointer text-center"><a href="#conditions">УСЛОВИЯ ЗА ПОЛЗВАНЕ</a></li>
     <li class="cursor-pointer text-center"><a href="">АЛЕРГЕНИ</a></li>
-    
 </ul>
 <ul class='social-container list-inline text-center'>
     <!-- <li class="cursor-pointer text-center">
@@ -167,12 +232,7 @@
     <li><a class="col-xs-4" href="https://www.google.bg/" target="blank">
         <img src='assets/images/socialMedia/google.png' data-toggle="tooltip" width="50px" title="Google map" height="50px"style="top:-33px" />
     </a></li>
-    <li><a class="col-xs-4" href="https://www.google.bg/" target="blank">
-        <img src='assets/images/socialMedia/google.png' data-toggle="tooltip" width="50px" title="Google map" height="50px"style="top:-33px" />
-    </a></li>
-    <li><a class="col-xs-4" href="https://www.google.bg/" target="blank">
-        <img src='assets/images/socialMedia/google.png' data-toggle="tooltip" width="50px" title="Google map" height="50px"style="top:-33px" />
-    </a></li>
+   
 </ul>
 
 </footer>   

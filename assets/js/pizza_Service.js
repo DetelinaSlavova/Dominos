@@ -1,5 +1,6 @@
 
    
+
    function Pizza (url, name, description, price){
        this.url = url;
         this.name = name;
@@ -38,7 +39,7 @@
    
    
 
-   function load() {
+   function loadPizza() {
     return new Promise(function (resolve, reject) {
         const HTTP_OK = 200;
         var xhr;
@@ -50,7 +51,7 @@
         else {
             xhr = new ActiveXObject();// IE 7-
         }
-        xhr.open('GET', "assets/js/pizza.json", true);
+        xhr.open('GET', "assets/JSON/pizza.json", true);
         
         xhr.send(null);
 

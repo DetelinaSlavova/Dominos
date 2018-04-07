@@ -16,7 +16,7 @@
     var fishingPizza = new Pizza("assets/images/pizza/fastingPizza.png","РИБА ТОН", "доматен сос, моцарела, риба тон, пресни домати, лук");
     var hamPizza = new Pizza("assets/images/pizza/hamClassic.png","ПИЦА ШУНКА", "доматен сос, моцарела, шунка, зелени чушки, пресни гъби");
     var hawaii = new Pizza("assets/images/pizza/hawaii.png","ХАВАЙ", "доматен сос, моцарела, шунка, ананас");
-    var pepperoniClassic = new Pizza("assets/images/pizza/pepperoniClassic.png", "доматен сос, картофи,гъби,черни маслини,сушени домати, пресни домати * може да съдържа следи от лактоза*.png","ПЕПЕРОНИ КЛАСИК", "доматен сос, моцарела, допълнително моцарела, пеперони, допълнително пеперони");
+    var pepperoniClassic = new Pizza("assets/images/pizza/pepperoniClassic.png", "ПЕПЕРОНИ КЛАСИК","доматен сос, картофи,гъби,черни маслини,сушени домати, пресни домати * може да съдържа следи от лактоза");
     var italianClassic = new Pizza("assets/images/pizza/italianClassic.png","ИТАЛИАНСКА", "доматен сос, моцарела, шунка, ананасдоматен сос, моцарела, песто, пармезан, пресни домати, босилек");
     var cheese = new Pizza("assets/images/pizza/4cheese.png", "ФОРМАДЖИ", "доматен сос, моцарела, чедар, краве сирене, пармезан");
     var gardenClassic = new Pizza("assets/images/pizza/gardenClassic.png","ПОСТНА ПИЦА", "доматен сос, картофи,гъби,черни маслини,сушени домати, пресни домати * може да съдържа следи от лактоза*");
@@ -50,7 +50,7 @@
         else {
             xhr = new ActiveXObject();// IE 7-
         }
-        xhr.open('GET', "assets/js/pizza.json", true);
+        xhr.open('GET', "assets/JSON/pizza.json", true);
         
         xhr.send(null);
 

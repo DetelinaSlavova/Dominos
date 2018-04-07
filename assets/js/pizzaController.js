@@ -1,16 +1,16 @@
 
-
-
      function pizzaController (){
         
-             load()
+             loadPizza()
              .then(function (data) {
                  var pizzaTamplate = document.getElementById('pizza-template').innerHTML;
                  var allPizza = data;
                  var pizzaPage = Handlebars.compile(pizzaTamplate);
-                 document.getElementById("second-page-container").innerHTML=pizzaPage({allPizza: allPizza });
-                 var secondPage = document.getElementById("second-page-container").innerHTML;
-                 document.getElementById("contentd").innerHTML = secondPage;
+                 document.getElementById("menu-contend").innerHTML=pizzaPage({allPizza: allPizza });
+                 document.getElementById("second-page-container").style.display = "block";
+                 document.querySelector("#home-page").style.display = "none";
+                 document.querySelector("#banner").style.display = "none";
+                 document.querySelector("#contentd").style.display = "none";
 
              })
              .catch(function (error) {

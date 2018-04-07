@@ -15,12 +15,15 @@ var DealStorage = (function(){
     var deal2 = new Deal("assets/images/deals/deal2.png", "За всяка пица взета от място получавате втора на половин цена");
     var deal3 = new Deal("assets/images/deals/deal3.png", "За всяка пица взета от място получавате втора на половин цена");
     var deal4 = new Deal("assets/images/deals/deal4.png", "За всяка пица взета от място получавате втора на половин цена");
+    var deal5 = new Deal("assets/images/deals/deal4.png", "За всяка пица взета от място получавате втора на половин цена");
+    
   
     
     deals.push(deal1);
     deals.push(deal2);
     deals.push(deal3);
     deals.push(deal4);
+    deals.push(deal5);
   
    
 
@@ -28,7 +31,10 @@ var DealStorage = (function(){
 
 });
 
+var d = DealStorage()
+// console.log(d)
 
+console.log(JSON.stringify(d))
 
 
 

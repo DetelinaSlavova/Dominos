@@ -6,7 +6,7 @@
     font-weight: 400;
     font-family: 'Open Sans', sans-serif;
     color: #555555;
-    background: #d8af75;
+    background-image: url("../images/background.jpg");
     
 }
 
@@ -59,26 +59,28 @@
 .slider {
     float: left;
     padding-left: 10px;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 #slider-center {
-    width: 90%;
+    width: 82%;
     float: left;
-    overflow: hidden;  
+    overflow: hidden; 
+    margin-left: 50px; 
 }
 
 
 #conteiner-for-offer {
     position: relative;
     display: inline-block;
-    width: 100%;
+    width: 95%;
+    height: 450px;
     transform: translate3d(0px 0px 0px);
     transition-duration: 400ms;
     transition-timing-function: ease;
     margin-left: 50px;
    
 }
-
+/* 
 .offer  {
     box-sizing: border-box;
     width: 260px;
@@ -86,21 +88,48 @@
     margin-right: 20px;
     text-align: center;
     background:rgb(255, 254, 254);
-    
     border-radius: 5px;     
-}
+} */
 
-.pizza  {
+.pizza, .pasta, .salads, .sandwich, .offer{
     box-sizing: border-box;
     width: 230px;
-    height: 400px;
+    height: 450px;
     float: left;
     margin-right: 20px;
     margin-bottom: 20px;
     text-align: center;
     background: rgb(255, 254, 254);;
-    border-radius: 5px;     
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: transform .1s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+       
 }
+
+.pizza:nth-chil(1){
+    border: 1px solid gray; 
+
+}
+
+.zoom:hover {
+    -webkit-transform: scale(1.025);
+    -khtml-transform: scale(1.025);
+    -moz-transform: scale(1.025);
+    -ms-transform: scale(1.025);
+    -o-transform: scale(1.025);
+    transform: scale(1.025);
+}
+
+
+
+.descr {
+    padding: 20px 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    height: 130px;
+}
+
 
 #container-for-pizza:last-child {
     margin-right: 0px;
@@ -112,7 +141,7 @@
     
 }
 .offer:first-child {
-    margin-left: -20px;
+    margin-left: -40px;
 }
 .button {
     color: #fff;
@@ -129,7 +158,10 @@
 .green-bnt {
     font-size: 0.8em;
     margin-bottom: 10px;
+    position: relative;
+    background-color: #609e29;
 }
+
 
 footer {
     height: 150px;
@@ -140,14 +172,13 @@ footer {
 .button:hover {
     background-color: #78ac36;
 }
-.green-bnt {
-    background-color: #609e29;
-}
 
-.socialsocial-container{
+   
+
+/* .social-container{
     width: 50%;
     text-align: 0 auto;  
-}
+} */
 
 .menu-bar {
     padding-top: 30px;  
@@ -168,13 +199,45 @@ footer {
     text-decoration: none;
 }
 
-#container-for-pizza {
+.container-for-menu{
     display: inline-block;
     box-sizing: border-box;
     width: 1340px;
-    padding-top: 150px;
+    padding-top: 50px;
     margin-left: 60px;
 }   
 
+.navbar-menu {
+    padding-top: 140px;
+    width: 100%;
+   
 
+   
+}
+#second-page-container ul {
+    text-align: center;
+}
+
+
+
+.navbar-menu li a{
+   
+   color: white;
+   padding: 10px;
+   margin: 20px;
+   font-size: 1em;
+   font-weight: bold;
+   text-decoration: none
+
+}
+
+.navbar-menu hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border-width: 2px;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
 

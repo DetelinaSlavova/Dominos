@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function firstPageContorller (){
         var homePage = document.getElementById("home-page").innerHTML;
-        document.getElementById("contentd").innerHTML = homePage;
+        homePage.innerHTML="";
+        // document.getElementById("contentd").innerHTML = homePage;
         var dealTamplate = document.getElementById('deal-template').innerHTML;
         var allDeals = DealStorage();
         var dealPage = Handlebars.compile(dealTamplate);
@@ -43,11 +44,26 @@ function router(){
         switch (page) {
             case "menu":
             pizzaController();
-            document.querySelector("#home-page").style.display = "none";
-            document.querySelector("#second-page-container").style.display = "none"
-            document.querySelector("#banner").style.display = "none";
+            case "pizza":
+            pizzaController();
             break;
-            case "restoranti": firstPageContorller();
+            case "pasta":
+            pastaController();
+            break;
+            case "salads":
+            saladsController();
+            break;
+            case "sandwich":
+            sandwichController ();
+            break;
+            case "dips":
+            firstPageContorller();
+            break;
+            case "desserts":
+            firstPageContorller();
+            break;
+            case "restoranti":
+            firstPageContorller();
             break;
             default: firstPageContorller();
             document.querySelector("#second-page-container").style.display = "none"
