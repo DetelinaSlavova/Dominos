@@ -13,11 +13,13 @@
     <script src="assets/js/first-page_Service.js"></script>
     <script src = "assets/js/first-page_Controller.js"></script>
     <script src="assets/js/pizza_Service.js"></script>
-    <script src="assets/js/pizzaController.js"></script>
     <script src="assets/js/pastaService.js"></script>
-    <script src = "assets/js/pastaController.js"></script>
     <script src="assets/js/salad_and_others_service.js"></script>
+    <script src="assets/js/pizzaController.js"></script>
+    <script src = "assets/js/pastaController.js"></script>
     <script src = "assets/js/salads_and_Others_Controllers.js"></script>
+    <script src = "assets/js/orderController.js"></script>
+    
      
     <title>Pizza</title>
 
@@ -122,6 +124,51 @@
 <div id="menu-contend"> </div>
 
 </div>
+<div id="orderPizza">
+    <img  height="300px">
+    
+    <p></p>
+    <div class="wrapper-for-offer"> 
+        <div class="product-left-wrapper">
+            <div class="form-group col-xs-6">
+                    <label>ТЕСТО</label>
+                <select id="typeOfDougt">
+                    <option value="traditional">Традиционно</option>
+                    <option value="italian">Италианско</option>
+                    <option value="Thiny">Тънко хрупкаво</option>
+                        
+                </select>
+            </div>
+
+            <div class="form-group col-xs-6">
+                <label>Големина</label>
+                <select id="size">
+                    <option value="half">Половин пица</option>
+                    <option value="8pieces">8 парчета</option>
+                    <option value="12pieces">12 парчета</option>
+                </select>
+            </div>
+            <div class="col-xs-12 small"><p>Продукти:</p> <p id="product_of_pizza"></p></div>
+        </div>
+        <div class="product-right-wrapper"> 
+            <div class="wrapper-for-qnt col-sm-4">
+                <label>КОЛИЧЕСТВО</label> <!-- purely semantic -->
+                <div class="form-control input-sm center merge-bottom-input" name="first">0</div>
+  
+                 <div class="btn-group btn-block" role="group" aria-label="plus-minus">
+                    <button type="button" class=" btn btn-sm btn-danger minus-button merge-top-left-button" disabled="disabled"><span class="glyphicon glyphicon-minus"></span></button>
+                    <button type="button" class="btn btn-sm btn-success plus-button merge-top-right-button"><span class="glyphicon glyphicon-plus"></span></button>
+                </div><!-- end button group -->
+            
+            </div> <!-- end column -->
+            <p id="price">ЦЕНА</p>
+            <div class="added button green-bnt col-sm-10 text-center">ДОБАВИ </div>
+        </div>    
+    
+    </div>
+</div>
+
+
 
 <script id="pizza-template" type="text/x-handlebars-template">
     <div class="container-for-menu"> 
@@ -130,7 +177,7 @@
                 <img class="display block" src="{{url}}" alt="pizza" width="230px" height="186"/>
                 <div class="center block padding=20px"><h4>{{name}}</h4></div>
                 <div class="center block padding=20px"><p class="descr">{{description}}</p></div>
-                <div class="button green-bnt center-block">ПОРЪЧАЙ </div>
+                <div class="order button green-bnt center-block">ПОРЪЧАЙ </div>
                 <div class="center-block blue-txt font-fold">
                 </div>
             </div> 
@@ -145,7 +192,7 @@
                 <img class="display block" src="{{url}}" alt="pizza" width="230px" height="186"/>
                 <div class="center block padding=20px"><h4>{{name}}</h4></div>
                 <div class="center block padding=20px"><p class="descr">{{description}}</p></div>
-                <div class="button green-bnt center-block">ПОРЪЧАЙ </div>
+                <div class=" button green-bnt center-block">ПОРЪЧАЙ </div>
                 <div class="center-block blue-txt font-fold">
                 </div>
             </div>
@@ -239,4 +286,5 @@
  
 
 </body>
+
 </html>

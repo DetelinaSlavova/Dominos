@@ -31,10 +31,6 @@ var DealStorage = (function(){
 
 });
 
-var d = DealStorage()
-// console.log(d)
-
-console.log(JSON.stringify(d))
 
 
 

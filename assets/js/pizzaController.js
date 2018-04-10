@@ -11,15 +11,19 @@
                  document.querySelector("#home-page").style.display = "none";
                  document.querySelector("#banner").style.display = "none";
                  document.querySelector("#contentd").style.display = "none";
-
-             })
+                 orderController();
+                 
+           })
+                 
              .catch(function (error) {
                  document.getElementById('contentd').innerHTML = "<p style='color:red'> Sorry, the following error ocurred : " + error + " </p>";
              
              });
-         } 
-         
 
+            
+         }
+
+        
 
 
 

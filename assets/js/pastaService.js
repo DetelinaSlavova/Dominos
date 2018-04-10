@@ -15,7 +15,7 @@ function Pasta (url, name, description, price){
  pasta.push(napolitana);
  pasta.push(peperoni)
 
- console.log(JSON.stringify(pasta))
+
 
 
  function loadPasta() {
@@ -25,7 +25,7 @@ function Pasta (url, name, description, price){
 
         if (XMLHttpRequest) {
             xhr = new XMLHttpRequest();
-            console.log(xhr)
+          
         }
         else {
             xhr = new ActiveXObject();// IE 7-
@@ -37,7 +37,6 @@ function Pasta (url, name, description, price){
         xhr.addEventListener('load', function () {
             if (xhr.status >= HTTP_OK && xhr.status < 300) {
                 var data = JSON.parse(xhr.responseText);
-                console.log(data)
                 resolve(data);
             } else {
                 reject(xhr.statusText);

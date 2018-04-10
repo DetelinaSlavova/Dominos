@@ -99,7 +99,7 @@
     margin-right: 20px;
     margin-bottom: 20px;
     text-align: center;
-    background: rgb(255, 254, 254);;
+    background: rgb(255, 254, 254);
     border-radius: 5px; 
     cursor: pointer; 
     transition: transform .1s;
@@ -121,15 +121,12 @@
     transform: scale(1.025);
 }
 
-
-
 .descr {
     padding: 20px 10px;
     font-size: 0.8em;
     font-weight: bold;
     height: 130px;
 }
-
 
 #container-for-pizza:last-child {
     margin-right: 0px;
@@ -162,7 +159,6 @@
     background-color: #609e29;
 }
 
-
 footer {
     height: 150px;
     background: rgb(255, 254, 254);
@@ -182,8 +178,7 @@ footer {
 
 .menu-bar {
     padding-top: 30px;  
-    margin-bottom: 30px; 
-    
+    margin-bottom: 30px;   
 }
 
 .menu-bar img {
@@ -210,14 +205,11 @@ footer {
 .navbar-menu {
     padding-top: 140px;
     width: 100%;
-   
-
-   
 }
+
 #second-page-container ul {
     text-align: center;
 }
-
 
 
 .navbar-menu li a{
@@ -228,7 +220,6 @@ footer {
    font-size: 1em;
    font-weight: bold;
    text-decoration: none
-
 }
 
 .navbar-menu hr {
@@ -241,3 +232,86 @@ footer {
     margin-right: 50px;
 }
 
+.center {
+    text-align: center;   
+}
+   
+   .merge-bottom-input {
+     width: 67px;
+     border-bottom-left-radius: 0;
+     border-bottom-right-radius: 0;
+   }
+   
+   .merge-top-left-button {
+     border-top-left-radius: 0;
+   }
+   
+   .merge-top-right-button {
+     border-top-right-radius: 0;
+   }
+#orderPizza{
+    display: none;
+    width: 80%;
+    height: 620px;
+    background: rgb(255, 254, 254);
+    margin: 40px 140px 40px;
+}
+
+#orderPizza img {
+    margin-left: 250px;
+}
+
+#orderPizza>p {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#closeOrderPizza {  
+    text-align: right;
+
+}
+
+.wrapper-for-offer{
+    display: inline-block;
+    width: 100%;
+    height: 220px;
+    background: rgb(255, 254, 254);
+    border-top: 2px dotted rgba(206, 201, 201, 0.979);
+   
+}
+.product-left-wrapper{
+    width: 60%;
+    height:100%; 
+    float: left;
+    border-right: 2px dotted rgba(206, 201, 201, 0.979);
+    
+}
+.product-right-wrapper {
+    width: 40%;
+    height: 200px;
+    float: left;
+    padding: 20px;
+}
+
+.product-right-wrapper p {
+    text-align: center;
+    height: 120px;
+    font-weight: bold;
+    
+}
+
+
+.wrapper-for-qnt {
+    float: right;
+}
+
+.form-group{
+    padding-top: 20px;
+    width: 49%;
+    float: left;
+}
+
+.added {
+    margin-left:30px;
+}
