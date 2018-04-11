@@ -1,14 +1,16 @@
-<script id="pizza-template" type="text/x-handlebars-template">
-    <div class="container-for-menu"> 
-        {{#each allPizza}}
-            <div class="pizza zoom">
-                <img class="display block" src="{{url}}" alt="pizza" width="230px" height="186"/>
-                <div class="center block padding=20px"><h4>{{name}}</h4></div>
-                <div class="center block padding=20px"><p class="descr">{{description}}</p></div>
-                <div class="order button green-bnt center-block">ПОРЪЧАЙ </div>
-                <div class="center-block blue-txt font-fold">
-                </div>
-            </div> 
-        {{/each}}
-    </div>      
-</script>
+<div class="container-for-menu">
+    {{#each allPizza}}
+    <div class="pizza zoom">
+        <img class="display block" src="{{url}}" alt="pizza" width="230px" height="186" />
+        <div class="center block padding=20px">
+            <h4>{{name}}</h4>
+        </div>
+        <div class="center block padding=20px">
+            <p class="descr">{{description}}</p>
+        </div>
+        <div class="order button green-bnt center-block">ПОРЪЧАЙ </div>
+        <div class="center-block blue-txt font-fold">
+        </div>
+    </div>
+    {{/each}}
+</div>
