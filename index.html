@@ -19,6 +19,7 @@
     <script src = "assets/js/pastaController.js"></script>
     <script src = "assets/js/salads_and_Others_Controllers.js"></script>
     <script src = "assets/js/orderController.js"></script>
+    <script src = "assets/js/basketController.js"></script>
     
      
     <title>Pizza</title>
@@ -34,10 +35,10 @@
     <nav class="navbar navbar-fixed-top">
         <div class='container'>
        
-        <div class='navbar-header'> 
-               <span id="logo"><img src = '' alt/> LOGO </span> </span> 
-        </div>
-        <div class="navbar-collapse collapse padding-left-0">
+            <div class='navbar-header'> 
+               <span ><img id="logo" src ='assets/images/logo.png' width="100px" height="60px" alt = "logo"/> </span>
+            </div>
+            <div class="navbar-collapse collapse padding-left-0">
                   
             <ul class="nav navbar-nav navbar-right">
                    
@@ -55,13 +56,14 @@
             </li>
             <li> <a href="/" class="font-bold">PIZZA TRAKER</a></li>
             <li><a href="/" class="font-bold">ПОРЪЧАЙ СЕГА</a></li>
+            <li><a href="#basket" class="font-bold" id="goToBasket">КОШНИЦА</a></li>
             <li class="cart-icon-wrapper">
                 <div class="basket cursor-pointer"></div>
             </li>
                    
             </ul>
-
-        
+            </div>
+        </div>
     </nav>   
     
 <div id="banner">
@@ -99,9 +101,6 @@
             <img class='promoRibbon' src="assets/images/offer_ribbon_bg.png" width="150px" height="80px;"/>
             <div class="center block padding=20px"><p>{{description}}</p></div>
             <div class="button green-bnt center-block">ВЗЕМИ ТАЗИ ОФЕРТA </div>
-            <div class="center-block blue-txt font-fold">
-                <img src= alt="Доставка"/>
-                <span>Доставка</span>
             </div>
         </div>
         
@@ -153,7 +152,7 @@
         <div class="product-right-wrapper"> 
             <div class="wrapper-for-qnt col-sm-4">
                 <label>КОЛИЧЕСТВО</label> <!-- purely semantic -->
-                <div class="form-control input-sm center merge-bottom-input" name="first">0</div>
+                <div class="form-control input-sm center merge-bottom-input" name="first">1</div>
   
                  <div class="btn-group btn-block" role="group" aria-label="plus-minus">
                     <button type="button" class=" btn btn-sm btn-danger minus-button merge-top-left-button" disabled="disabled"><span class="glyphicon glyphicon-minus"></span></button>
@@ -161,8 +160,12 @@
                 </div><!-- end button group -->
             
             </div> <!-- end column -->
-            <p id="price">ЦЕНА</p>
-            <div class="added button green-bnt col-sm-10 text-center">ДОБАВИ </div>
+            <p>ЦЕНА:</p>
+            <p id="price"></p>
+            <div class="added button green-bnt col-sm-10 text-center">ДОБАВИ </div>  
+            </div>
+            
+           
         </div>    
     
     </div>
@@ -253,6 +256,57 @@
         {{/each}}
     </div>      
 </script>
+<div id="basket">
+        <form action="">
+        <p>ПОТВЪРЖДАВАНЕ НА ПОРЪЧКАТА</p>
+        <table>
+            <thead>
+                <th> </th>
+                <th>Продукт</th>
+                <th>Количество</th>
+                <th>Цена</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img id="imageOfProduct" src = ""/></td>
+                    <td id="nameOfProduct"></td>
+                    <td id = "qntOfProduct"></td>
+                    <td id = "priceOfProduct"></td>
+                   
+                </tr>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td>ОБЩО:</td>
+                        <td id="totalPrice"></td>
+                    </tr>
+                </tfoot>
+            </tbody>
+        </table>
+    
+        <div>
+            <fieldset >Адрес за доставката</fieldset>
+                <div id="ulica">
+                    <input id="ulicata" type="text" placeholder="Улица">
+                    <input id="nomer" type="text" placeholder="Номер">
+                </div>
+                
+                <div class="tri2">
+                    <input id="etaj" type="text" placeholder="Етаж">
+                    <input id="blok" type="text" placeholder="Блок">
+                </div>
+                <div class="tri2">
+                    <input id="apartament" type="text" placeholder="Апартамент">
+                    <input id="vhod" type="text" placeholder="Вход">
+                </div>
+                <div class="tri2">
+                        <input id="telefon" type="text" placeholder="Телефон">
+                </div>
+        </div>
+        <div class="button green-bnt center-block col-xs-4 text-center">ПОТВЪРДИ </div>
+        
+    </div>
+</form>
 <footer>
 <ul class='menu-bar list-inline text-center'>
     <li class="cursor-pointer text-center"><a href="#menu">МЕНЮ</a></li>
@@ -281,9 +335,7 @@
     </a></li>
    
 </ul>
-
 </footer>   
- 
 
 </body>
 

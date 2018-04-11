@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     
-    function firstPageContorller (){
+    function firstPageController (){
         var homePage = document.getElementById("home-page").innerHTML;
         homePage.innerHTML="";
         // document.getElementById("contentd").innerHTML = homePage;
@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
         var allDeals = DealStorage();
         var dealPage = Handlebars.compile(dealTamplate);
         document.querySelector('#conteiner-for-offer').innerHTML=dealPage({allDeals: allDeals });
-       
     }
    
     window.addEventListener("scroll", scroll, false)
@@ -60,12 +59,14 @@ function router(){
             firstPageContorller();
             break;
             case "desserts":
-            firstPageContorller();
+            firstPageController();
             break;
             case "restoranti":
-            firstPageContorller();
+            firstPageController();
             break;
-            default: firstPageContorller();
+            case "basket":
+            basketController() ;
+            default: firstPageController();
             document.querySelector("#second-page-container").style.display = "none"
             break;
             

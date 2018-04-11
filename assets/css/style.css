@@ -40,6 +40,10 @@
 .navbar-nav li a   {
     color: white;
 }
+
+#logo {
+    cursor: pointer;
+}
 #banner {
     width: 100%;    
 }
@@ -108,8 +112,7 @@
 }
 
 .pizza:nth-chil(1){
-    border: 1px solid gray; 
-
+    border: 1px solid gray;
 }
 
 .zoom:hover {
@@ -236,17 +239,17 @@ footer {
     text-align: center;   
 }
    
-   .merge-bottom-input {
+.merge-bottom-input {
      width: 67px;
      border-bottom-left-radius: 0;
      border-bottom-right-radius: 0;
    }
    
-   .merge-top-left-button {
+.merge-top-left-button {
      border-top-left-radius: 0;
    }
    
-   .merge-top-right-button {
+.merge-top-right-button {
      border-top-right-radius: 0;
    }
 #orderPizza{
@@ -254,7 +257,7 @@ footer {
     width: 80%;
     height: 620px;
     background: rgb(255, 254, 254);
-    margin: 40px 140px 40px;
+    margin: 120px 140px 40px;
 }
 
 #orderPizza img {
@@ -269,7 +272,6 @@ footer {
 
 #closeOrderPizza {  
     text-align: right;
-
 }
 
 .wrapper-for-offer{
@@ -296,11 +298,9 @@ footer {
 
 .product-right-wrapper p {
     text-align: center;
-    height: 120px;
-    font-weight: bold;
-    
+    height: 40px;
+    font-weight: bold; 
 }
-
 
 .wrapper-for-qnt {
     float: right;
@@ -314,4 +314,40 @@ footer {
 
 .added {
     margin-left:30px;
+    margin-top: 50px;
+}
+
+#basket {
+    width: 600px;
+    height: 600px;
+    background: rgb(255, 254, 254);
+    margin-top: 100px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;  
+    display: none;
+    border-radius: 5%;
+}
+#basket p {
+    font-weight: bold;
+    text-align: center;
+    margin: 20px;
+}
+
+#basket th {
+    font-weight: bold;
+    
+}
+
+#basket th, td {
+    width: 200px;
+}
+
+#basket input {
+    margin: 5px;
+}
+
+#basket button{
+    margin-top: 40px;
 }

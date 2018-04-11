@@ -12,6 +12,7 @@ function pastaController (){
             document.querySelector("#home-page").style.display = "none";
             document.querySelector("#banner").style.display = "none";
             document.querySelector("#contentd").style.display = "none";
+            orderPastaController();
 
         })
         .catch(function (error) {

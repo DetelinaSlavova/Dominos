@@ -29,7 +29,7 @@ var DealStorage = (function(){
 
    return deals
 
-});
+}) ;
 
 
 
