@@ -12,6 +12,7 @@
                  document.querySelector("#banner").style.display = "none";
                  document.querySelector("#contentd").style.display = "none";
                  document.getElementById("orderPizza").style.display = "none";
+                 document.getElementById("basket").style.display = "none";
                  orderPizzaController();
                  
            })

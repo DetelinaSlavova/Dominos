@@ -21,6 +21,7 @@
     <script src = "assets/js/orderController.js"></script>
     <script src = "assets/js/basketController.js"></script>
     
+    
      
     <title>Pizza</title>
 
@@ -56,7 +57,7 @@
             </li>
             <li> <a href="/" class="font-bold">PIZZA TRAKER</a></li>
             <li><a href="/" class="font-bold">ПОРЪЧАЙ СЕГА</a></li>
-            <li><a href="#basket" class="font-bold" id="goToBasket">КОШНИЦА</a></li>
+            <li><a href="#basket" class="font-bold" id="goToBasket"><img src="assets/images/basket.png" alt="basket" width="50px" height="50px"><span id="productInBasket"></span></a></li>
             <li class="cart-icon-wrapper">
                 <div class="basket cursor-pointer"></div>
             </li>
@@ -142,6 +143,7 @@
             <div class="form-group col-xs-6">
                 <label>Големина</label>
                 <select id="size">
+                    <option value="half">Избери размер</option>
                     <option value="half">Половин пица</option>
                     <option value="8pieces">8 парчета</option>
                     <option value="12pieces">12 парчета</option>
@@ -266,50 +268,44 @@
                 <th>Количество</th>
                 <th>Цена</th>
             </thead>
-            <tbody>
-                <tr>
-                    <td><img id="imageOfProduct" src = ""/></td>
-                    <td id="nameOfProduct"></td>
-                    <td id = "qntOfProduct"></td>
-                    <td id = "priceOfProduct"></td>
-                   
-                </tr>
+            <tbody id = "nameOfProduct">
+                
                 <tfoot>
                     <tr>
                         <td colspan="2"></td>
-                        <td>ОБЩО:</td>
+                        <td>Общо:</td>
                         <td id="totalPrice"></td>
                     </tr>
                 </tfoot>
             </tbody>
         </table>
     
-        <div>
-            <fieldset >Адрес за доставката</fieldset>
+        <div id = "adress"> 
+            <fieldset >Адрес за доставката:</fieldset>
                 <div id="ulica">
-                    <input id="ulicata" type="text" placeholder="Улица">
-                    <input id="nomer" type="text" placeholder="Номер">
+                    <input id="ulicata" type="text" placeholder="ж.к / улица">
+                    <input id="nomer" type="text" placeholder="номер">
                 </div>
                 
                 <div class="tri2">
-                    <input id="etaj" type="text" placeholder="Етаж">
-                    <input id="blok" type="text" placeholder="Блок">
+                    <input id="etaj" type="text" placeholder="етаж">
+                    <input id="blok" type="text" placeholder="блок">
                 </div>
                 <div class="tri2">
-                    <input id="apartament" type="text" placeholder="Апартамент">
-                    <input id="vhod" type="text" placeholder="Вход">
+                    <input id="apartament" type="text" placeholder="апартамент">
+                    <input id="vhod" type="text" placeholder="вход">
                 </div>
                 <div class="tri2">
-                        <input id="telefon" type="text" placeholder="Телефон">
+                        <input id="telefon" type="text" placeholder="телефон">
                 </div>
         </div>
-        <div class="button green-bnt center-block col-xs-4 text-center">ПОТВЪРДИ </div>
+        <div class="button green-bnt center-block col-xs-4 text-center" id="confirm">ПОТВЪРДИ </div>
         
     </div>
 </form>
 <footer>
 <ul class='menu-bar list-inline text-center'>
-    <li class="cursor-pointer text-center"><a href="#menu">МЕНЮ</a></li>
+    <li class="cursor-pointer text-center"><a href="#menu">МЕНЮ</a></li> 
     <li class="cursor-pointer text-center"><a href="#restoranti">РЕСТОРАНТИ</a></li>
     <li class="cursor-pointer text-center"><a href="#contactus">СВЪРЖЕТЕ СЕ С НАС</a></li>
     <li class="cursor-pointer text-center"><a href="#conditions">УСЛОВИЯ ЗА ПОЛЗВАНЕ</a></li>

@@ -325,29 +325,49 @@ footer {
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
-    padding: 30px;  
+    padding: 20px;  
     display: none;
     border-radius: 5%;
+}
+#basket table {
+    margin-bottom: 40px;
 }
 #basket p {
     font-weight: bold;
     text-align: center;
-    margin: 20px;
+    margin-bottom: 40px;
+    color: rgb(221, 77, 77);
+    text-decoration: underline; 
 }
 
 #basket th {
     font-weight: bold;
-    
+    text-align: left; 
+    border-bottom: rgb(221, 77, 77)
 }
 
 #basket th, td {
     width: 200px;
+    text-align: center;
 }
 
 #basket input {
     margin: 5px;
 }
 
-#basket button{
+#basket .button{
     margin-top: 40px;
+    margin-left: 140px;
+}
+
+#adress {
+    margin-left: 20px;
+}
+fieldset {
+  text-align: center;
+ 
+}
+
+#productInBasket {
+    color: rgba(255, 0, 0, 0.589);
 }
