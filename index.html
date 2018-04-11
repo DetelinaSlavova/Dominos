@@ -1,108 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="node_modules/handlebars/dist/handlebars.min.js"></script> 
-    <link rel="stylesheet" href="assets/css/reset.css"/>
-    <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <link rel="stylesheet" href="node_modules/bootstrap-3.3.6-dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="node_modules/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
     <script src="node_modules/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
     <script src="assets/js/helper.js"></script>
     <script src="assets/js/first-page_Service.js"></script>
-    <script src = "assets/js/first-page_Controller.js"></script>
+    <script src="assets/js/first-page_Controller.js"></script>
     <script src="assets/js/pizza_Service.js"></script>
     <script src="assets/js/pastaService.js"></script>
     <script src="assets/js/salad_and_others_service.js"></script>
     <script src="assets/js/pizzaController.js"></script>
-    <script src = "assets/js/pastaController.js"></script>
-    <script src = "assets/js/salads_and_Others_Controllers.js"></script>
-    <script src = "assets/js/orderController.js"></script>
-    <script src = "assets/js/basketController.js"></script>
+    <script src="assets/js/pastaController.js"></script>
+    <script src="assets/js/salads_and_Others_Controllers.js"></script>
+    <script src="assets/js/orderController.js"></script>
+    <script src="assets/js/basketController.js"></script>
     <script src="assets/js/router.js"></script>
     <title>Pizza</title>
 
-</head> 
+</head>
+
 <body class="transparent" data-target=".navbar" data-offset="50">
     <!-- <div class = "loading" >
         <img src="" class='center-block img-circle' width="50px" height="50px" alt="loading"/> 
     </div> -->
-    
-<header> 
 
-    <nav class="navbar navbar-fixed-top">
-        <div class='container'>
-       
-            <div class='navbar-header'> 
-               <span ><img id="logo" src ='assets/images/logo.png' width="100px" height="60px" alt = "logo"/> </span>
+    <header>
+
+        <nav class="navbar navbar-fixed-top">
+            <div class='container'>
+
+                <div class='navbar-header'>
+                    <span>
+                        <img id="logo" src='assets/images/logo.png' width="100px" height="60px" alt="logo" /> </span>
+                </div>
+                <div class="navbar-collapse collapse padding-left-0">
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="callcente text-center">
+                            <ul class="list-inline">
+                                <li data-toggle="tooltip" data-placement="top" title='ОБАДЕТЕ НИ СЕ'>
+                                    <a>
+                                        <img src='assets/images/phone.png' width="30px" height="30px" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="font-bold" href="tel: 070012255">070012255</a>
+                                </li>
+                            </ul>
+
+
+                        </li>
+                        <li class="language-select cursor-pointer language-select-desktop text-center">
+                            <a href="javascrip:;" class="font-bold lang_select" data-lang="bg">BG</a>
+                        </li>
+                        <li>
+                            <a href="/" class="font-bold">PIZZA TRAKER</a>
+                        </li>
+                        <li>
+                            <a href="/" class="font-bold">ПОРЪЧАЙ СЕГА</a>
+                        </li>
+                        <li>
+                            <a href="#basket" class="font-bold" id="goToBasket">КОШНИЦА</a>
+                        </li>
+                        <li class="cart-icon-wrapper">
+                            <div class="basket cursor-pointer"></div>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
-            <div class="navbar-collapse collapse padding-left-0">
-                  
-            <ul class="nav navbar-nav navbar-right">
-                   
-            <li class="callcente text-center"> 
-                <ul class="list-inline">
-                    <li  data-toggle="tooltip" data-placement="top" title='ОБАДЕТЕ НИ СЕ'>
-                    <a> <img src='assets/images/phone.png' width="30px" height="30px" /></a></li>
-                    <li><a class="font-bold" href="tel: 070012255">070012255</a> </li>
-                </ul>
-                   
-                           
-            </li>
-            <li class="language-select cursor-pointer language-select-desktop text-center"> 
-                <a href="javascrip:;" class = "font-bold lang_select" data-lang="bg">BG</a>
-            </li>
-            <li> <a href="/" class="font-bold">PIZZA TRAKER</a></li>
-            <li><a href="/" class="font-bold">ПОРЪЧАЙ СЕГА</a></li>
-            <li><a href="#basket" class="font-bold" id="goToBasket">КОШНИЦА</a></li>
-            <li class="cart-icon-wrapper">
-                <div class="basket cursor-pointer"></div>
-            </li>
-                   
-            </ul>
-            </div>
+        </nav>
+
+        <div id="banner">
+            <img src="assets/images/001_banner.jpg" width="1349px" height="650px" alt='pizza' />
         </div>
-    </nav>   
-    
-<div id="banner">
-        <img src="assets/images/001_banner.jpg" width="1349px" height="650px"alt='pizza' />
-</div>
-<div id="menu-contend"> </div>
-</header>
-<!-- Main Content -->
-<main id="contentd"> </main> 
+        <div id="menu-contend">
+            <ul class="navbar-menu list-inline text-center">
+                <li class="cursor-pointer text-center">
+                    <a href="#pizza">ПИЦИ</a>
+                </li>
+                <li class="cursor-pointer text-center">
+                    <a href="#pasta">ПАСТА</a>
+                </li>
+                <li class="cursor-pointer text-center">
+                    <a href="#salads">САЛАТИ</a>
+                </li>
+                <li class="cursor-pointer text-center">
+                    <a href="#sandwich">САНДВИЧИ</a>
+                </li>
+                <li class="cursor-pointer text-center">
+                    <a href="#dips">СОСОВЕ </a>
+                </li>
+                <li class="cursor-pointer text-center">
+                    <a href="#desserts">ДЕСЕРТИ </a>
+                </li>
+                <hr> </hr>
+            </ul>
+        </div>
+    </header>
+    <!-- Main Content -->
+    <main id="contentd"> </main>
 
-<footer>
-<ul class='menu-bar list-inline text-center'>
-    <li class="cursor-pointer text-center"><a href="#menu">МЕНЮ</a></li>
-    <li class="cursor-pointer text-center"><a href="#restoranti">РЕСТОРАНТИ</a></li>
-    <li class="cursor-pointer text-center"><a href="#contactus">СВЪРЖЕТЕ СЕ С НАС</a></li>
-    <li class="cursor-pointer text-center"><a href="#conditions">УСЛОВИЯ ЗА ПОЛЗВАНЕ</a></li>
-    <li class="cursor-pointer text-center"><a href="">АЛЕРГЕНИ</a></li>
-</ul>
-<ul class='social-container list-inline text-center'>
-    <!-- <li class="cursor-pointer text-center">
+    <footer>
+        <ul class='menu-bar list-inline text-center'>
+            <li class="cursor-pointer text-center">
+                <a href="#menu">МЕНЮ</a>
+            </li>
+            <li class="cursor-pointer text-center">
+                <a href="#restoranti">РЕСТОРАНТИ</a>
+            </li>
+            <li class="cursor-pointer text-center">
+                <a href="#contactus">СВЪРЖЕТЕ СЕ С НАС</a>
+            </li>
+            <li class="cursor-pointer text-center">
+                <a href="#conditions">УСЛОВИЯ ЗА ПОЛЗВАНЕ</a>
+            </li>
+            <li class="cursor-pointer text-center">
+                <a href="">АЛЕРГЕНИ</a>
+            </li>
+        </ul>
+        <ul class='social-container list-inline text-center'>
+            <!-- <li class="cursor-pointer text-center">
         <a> <img class="visible-xs visible-sm" src="assets/images/phone.png" data-toggle="tooltip" data-placement="top" title="" alt="Telephone" data-original-title="070012525">
             <img class="tel070012525 visible-md visible-lg" src="/" data-toggle="tooltip" data-placement="top" title="" alt="Telephone" data-original-title="070012525">070012525
         </a>
     </li> -->
-    <li><a class="col-xs-4" href="https://www.facebook.com/" target="blank">
-        <img src='assets/images/socialMedia/facebook.png' data-placement="top" data-toggle="tooltip" width="50px" height="50px" title="Facebook" style="top:-50px" />
-    </a></li>   
-    <li><a class="col-xs-4" href="https://www.twitter.com" target="blank"> 
-        <img src='assets/images/socialMedia/twitter.png' data-placement="top" data-toogle="tooltip" width="50px" height="50px" title="Twitter" style="top:-33px" />
-    </a></li>
-    <li><a class="col-xs-4" href="https://www.youtube.com/" target="blank">
-        <img src='assets/images/socialMedia/youtube.png' data-toggle="tooltip" width="50px" height="50px" title="Youtube"style="top:-33px" />
-    </a></li>
-    <li><a class="col-xs-4" href="https://www.google.bg/" target="blank">
-        <img src='assets/images/socialMedia/google.png' data-toggle="tooltip" width="50px" title="Google map" height="50px"style="top:-33px" />
-    </a></li>
-   
-</ul>
-</footer>   
+            <li>
+                <a class="col-xs-4" href="https://www.facebook.com/" target="blank">
+                    <img src='assets/images/socialMedia/facebook.png' data-placement="top" data-toggle="tooltip" width="50px" height="50px" title="Facebook"
+                        style="top:-50px" />
+                </a>
+            </li>
+            <li>
+                <a class="col-xs-4" href="https://www.twitter.com" target="blank">
+                    <img src='assets/images/socialMedia/twitter.png' data-placement="top" data-toogle="tooltip" width="50px" height="50px" title="Twitter"
+                        style="top:-33px" />
+                </a>
+            </li>
+            <li>
+                <a class="col-xs-4" href="https://www.youtube.com/" target="blank">
+                    <img src='assets/images/socialMedia/youtube.png' data-toggle="tooltip" width="50px" height="50px" title="Youtube" style="top:-33px"
+                    />
+                </a>
+            </li>
+            <li>
+                <a class="col-xs-4" href="https://www.google.bg/" target="blank">
+                    <img src='assets/images/socialMedia/google.png' data-toggle="tooltip" width="50px" title="Google map" height="50px" style="top:-33px"
+                    />
+                </a>
+            </li>
+
+        </ul>
+    </footer>
 
 </body>
 

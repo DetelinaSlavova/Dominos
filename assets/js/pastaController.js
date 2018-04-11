@@ -1,29 +1,37 @@
 
-function pastaController (){
+var pastaController = function() {
 
-        loadPasta()
-        .then(function (data) {
-            var pastaTamplate = document.getElementById('pasta-template').innerHTML;
+
+
+    var render = function (data) {
+        getTemplate('pasta-template').then(function (src) {
             var allPasta = data;
-            var pastaPage = Handlebars.compile(pastaTamplate);
-            document.getElementById("menu-contend").innerHTML=" ";
-            document.getElementById("menu-contend").innerHTML=pastaPage ({allPasta: allPasta });
-            document.getElementById("second-page-container").style.display = "block";
-            document.querySelector("#home-page").style.display = "none";
-            document.querySelector("#banner").style.display = "none";
-            document.querySelector("#contentd").style.display = "none";
+            var pastaPage = Handlebars.compile(src);
+            $("#contentd").append(pastaPage({ allPasta: allPasta }));
             orderPastaController();
-
-        })
-        .catch(function (error) {
-            document.getElementById('contentd').innerHTML = "<p style='color:red'> Sorry, the following error ocurred : " + error + " </p>";
-        
         });
-    } 
-    
+    }
+
+    var loadPasta = function () {
+        getJson("pasta")
+            .done(function (data) {
+                console.log('done');
+                render(data);
+            })
+            .fail(function (error) {
+                console.log('fail');
+                document.getElementById('contentd').innerHTML = "<p style='color:red'> Sorry, the following error ocurred : " + error + " </p>";
+            });
+    }
+
+    return {
+        loadPasta: loadPasta
+    }
+}
 
 
 
 
-    
+
+
 

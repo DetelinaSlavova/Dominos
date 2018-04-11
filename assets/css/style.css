@@ -351,3 +351,7 @@ footer {
 #basket button{
     margin-top: 40px;
 }
+
+#banner{
+    display:none;
+}

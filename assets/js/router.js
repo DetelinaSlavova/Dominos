@@ -1,22 +1,23 @@
 function router() {
 
     $("#contentd").empty();
-
+    $("#banner").hide();
+    $("#menu-contend").show();
     var page = location.hash.slice(1);
     switch (page) {
         case "menu":
             pizzaController().loadPizza();
         case "pizza":
-            pizzaController();
+            pizzaController().loadPizza();
             break;
         case "pasta":
-            pastaController();
+            pastaController().loadPasta();
             break;
         case "salads":
-            saladsController();
+            saladsController().loadSalads();
             break;
         case "sandwich":
-            sandwichController();
+            sandwichController().loadSandwich();
             break;
         case "dips":
             firstPageContorller();
@@ -31,6 +32,8 @@ function router() {
             basketController();
         default: 
             firstPageController().render();
+            $("#banner").show();
+            $("#menu-contend").hide();
             break;
 
     }
