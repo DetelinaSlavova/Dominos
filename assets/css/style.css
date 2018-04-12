@@ -326,7 +326,6 @@ footer {
     margin-left: auto;
     margin-right: auto;
     padding: 30px;  
-    display: none;
     border-radius: 5%;
 }
 #basket p {
@@ -350,4 +349,261 @@ footer {
 
 #basket button{
     margin-top: 40px;
+}
+
+
+
+/* login css */
+body{
+    background-color: #d8af75;
+}
+#loginFirst{
+    background-color: white;
+    width: 610px;
+    height: 575px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10% / 50%;
+    /* display: none; */
+}
+#loginFirstUp > h1{
+    text-align: center;
+}
+#loginFirstUp > img{
+    width: 135px;
+    display: block;
+    margin-bottom: 18px;
+    margin-left: 45px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+#loginEmailDiv {
+    height: 40px;
+}
+#loginEmail {
+    width: 90%;
+    margin-left: 4%;
+    height: 100%;
+    font-size: 1.5em;
+    border-radius: 15px;
+}
+#loginPasswordDiv{
+    margin-top: 30px;
+    height: 40px;
+}
+#loginPassword{
+    width: 90%;
+    margin-left: 4%;
+    height: 100%;
+    font-size: 1.5em;
+    border-radius: 15px;
+}
+#loginFirst1{
+    width: 602px;
+    height: 570px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-width: 10px 4px;
+    border-radius: 10% / 50%;
+    border: double;
+}
+#zabravenaParola{
+    float: left;
+    margin: 24px 5%;
+    width: 40%;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#zabravenaParola > a {
+    font-size: 1.2em;
+}
+#zapomniMe{
+    width: 45%;
+    float: left;
+    margin: 24px -1%;
+    cursor: pointer;
+    text-align: right;
+}
+#zapomniMe > p{
+    float: right;
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+#zapomniMe > input{
+    float: right; 
+}
+#loginButtonInDiv{
+    margin: auto;
+    width: 85%;
+    margin-top: 15%;
+    text-align: center;
+    height: 44px;
+    border-bottom: 5px dotted;
+    padding-bottom: 28px;
+}
+#loginButtonIn{
+    height: 100%;
+    width: 30%;
+    background-color: red;
+    font-size: 1.5em;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#loginFirstDown{
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 8px;
+}
+#loginButtonRegDiv{
+    margin: auto;
+    margin-top: 5%;
+    text-align: center;
+    height: 44px;
+}
+#loginButtonReg{
+    height: 100%;
+    width: 30%;
+    background-color: blue;
+    font-size: 1.3em;
+    border-radius: 15px;
+    cursor: pointer;
+}
+#loginContainer {
+    background-color: white;
+    margin: auto;
+}
+#loginContainer{
+    width: 1100px;
+    height: 600px;
+    margin-top: 140px;
+    margin-bottom: 140px;
+    display: none;
+}
+.heading{
+    text-align: center;
+}
+#photo{
+    width: 20%;
+    height: 70%;
+}
+#loginContainer div{
+    float: left;
+    margin: 1.5em;
+}
+#loginContainer div input{
+    height: 2em;
+    width: 100%;
+    font-size: 1.4em;
+    background-color:#F2F4F5;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+.names{
+    width:33%;
+}
+#emailAddress{
+    width: 70.3%;
+}
+#pass1{
+    width: 70.3%;
+}
+#pass2{
+    width: 70.3%;
+}
+#text{
+    width: 45%;
+}
+#addPhoto{
+    width: 100%;
+    text-align: center;
+    margin-top: 23%;
+    height: 25%;
+}
+#reg{
+    width: 19%;
+    text-align: center;
+    margin-top: 5%;
+    height :17%;
+}
+#buttonReg{
+    height: 45%;
+    width: 90%;
+    margin-top: 10%;
+    background-color: tomato;
+    cursor: pointer;
+    color: white;
+    font-size: 1.3em;
+}
+#buttonPhoto{
+    width: 90%;
+    height: 43%;
+    background: greenyellow;
+    cursor: pointer;
+    color: white;
+    font-size: 1.3em;
+}
+div > h1{
+    padding-top: 0.5em;
+    font-size: 2em;
+}
+#firstp{
+    padding-top: 1.7em;
+}    
+#loginContainer2{
+    margin: auto;
+    width: 1100px;
+    height: 600px;
+    margin-top: 140px;
+    margin-bottom: 140px;
+    background-color: white;  
+    display: none;
+}
+#loginContainer2 div{
+    float: left;
+    margin: 1.5em;
+}
+input{
+    background-color: #F2F4F5;
+}
+#loginContainer2 div input{
+    height: 2em;
+    width: 100%;
+    font-size: 1.4em;
+    background-color: #F2F4F5;
+    border-radius: 15px;
+}
+#adress{
+    width: 92.5%;
+}
+#ulica{
+    width: 37.5%;
+}
+.tri{
+    width: 14%;
+}
+.tri2{
+    width: 28%;
+}
+#loginContainer2 > h1{
+    padding-top: 3%;
+    margin-bottom: 1%;
+}
+#dobavi > button {
+    height: 100%;
+    width: 15%;
+    font-size: 1.5em;
+    background-color: red;
+    cursor: pointer;
+}
+#dobavi{
+    width: 95%;
+    text-align: center;
+    height: 3em;
+}
+.in{
+    display: inline-block;
+    color: red;
 }

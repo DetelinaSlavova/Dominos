@@ -11,11 +11,11 @@ var pizzaController = function () {
     var loadPizza = function(){
         getJson("pizza")
             .done(function (data) {
-                console.log('done');
+
                 render(data);
             })
             .fail(function (error) {
-                console.log('fail');
+
                 document.getElementById('contentd').innerHTML = "<p style='color:red'> Sorry, the following error ocurred : " + error + " </p>";
             });
     }

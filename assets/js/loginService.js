@@ -31,6 +31,7 @@ var users = (function () {
         if ((street.trim().length > 0) && (number.trim().length > 0) && (poshtenskiKod.trim().length > 0) &&
             (grad.trim().length > 0) && (tel.trim().length > 0) && (etaj.trim().length > 0)) {
             this.users[lastUser].adress = new newAdress(nameOfAdress, street, number, poshtenskiKod, grad, tel, zvunec, etaj, blok, apartament, vhod);
+            localStorage.setItem(this.users[lastUser].id , JSON.stringify(this.users[lastUser]));
             return true;
         } else {
             return false;
@@ -49,7 +50,9 @@ var users = (function () {
             && pass == passAgain && name.trim().length > 0 && secondName.trim().length > 0
             && emaila.trim().length > 0 && pass.trim().length > 0) {
             if (!this.users.find(users => (users.email == emaila && users.pass == pass))) {
-                this.users.push(new NewUser(name, secondName, emaila, pass, passAgain))
+                let currentUser = new NewUser(name, secondName, emaila, pass, passAgain);
+                this.users.push(currentUser);
+
                 return true;
             } else {
                 return false
@@ -62,9 +65,8 @@ var users = (function () {
             return user;
         }
     }
+
     return new Users();
 })();
 users.addNewUser("gosh", "ivan", "asdasdas", "123", "123")
-console.log(users.isUser("asdasdas", "123"))
-console.log(users)
-console.log(users.returnUser("asdasdas", "123"))
+

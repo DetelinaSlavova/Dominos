@@ -1,7 +1,7 @@
-var firstPageController =  function () {
+var firstPageController = function () {
 
     var render = function (data) {
-        console.log('here');
+
         getTemplate('home-page').then(function (src) {
             var homePage = Handlebars.compile(src);
             $("#contentd").append(homePage());
@@ -14,7 +14,7 @@ var firstPageController =  function () {
     }
 
     return {
-        render : render
+        render: render
     };
 }
 

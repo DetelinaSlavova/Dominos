@@ -20,16 +20,22 @@ function router() {
             sandwichController().loadSandwich();
             break;
         case "dips":
-            firstPageContorller();
+            firstPageContorller().render();
             break;
         case "desserts":
-            firstPageController();
+            firstPageController().render();
             break;
         case "restoranti":
-            firstPageController();
+            firstPageController().render();
             break;
         case "basket":
-            basketController();
+            $("#menu-contend").hide();
+            basketController().render();
+            break;
+        case "login":
+            $("#menu-contend").css("visibility","hidden");
+            loginController().init();
+            break;
         default: 
             firstPageController().render();
             $("#banner").show();
